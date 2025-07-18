@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 3%;
+  z-index: 1000;
+}
+
+.primary-navigation{
+  position:sticky;
+  display: flex;
+  justify-content: center;
+  max-width:380px;
+  padding:1rem;
+  border-radius: 5rem;
+  border:1px solid var(--border-primary);
+  color:var(--text-secondary);
+  backdrop-filter: blur(12px);
+
+}
+.navigation-link{
+  ul{
+    display: flex;
+    gap:1.5rem;
+    align-items: center;
+    cursor: pointer;
+    li{
+      font-weight: var( --font-weight-medium);
+      font-size: clamp(0.5rem, 0.54rem + 0.3vw, 0.9rem);
+    }
+  }
+}
