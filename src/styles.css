@@ -147,3 +147,21 @@
     background-color: var(--bg-primary);
   }
 }
+
+@layer layout{
+  .flow > * + * {
+    margin-top: 1em;
+  }
+
+  .section {
+    padding-block: calc(110px + 67 * ((100vw - 320px) / 1600));
+    scroll-snap-align: start;
+  }
+
+  .wrapper {
+    max-width: calc(1200px + 2rem);
+    margin-inline: auto;
+    padding: 1rem;
+  }
+
+}
