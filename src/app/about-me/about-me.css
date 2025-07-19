@@ -6,9 +6,7 @@
     grid-template-columns: repeat(2,1fr);
     gap:12rem;
   }
-  .block{
-    background-color: pink;
-  }
+
 
   .about-title{
     font-size: var(--text-5xl);
@@ -35,5 +33,34 @@
       color: var(--text-base);
       font-weight: var(--font-weight-medium);
     }
+  }
+
+  .about-monogram{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:0.75rem;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .monogram{
+    display: flex;
+    border-radius: 100%;
+    width: 8rem;
+    height: 8rem;
+    background-color: var(--bg-secondary);
+    object-fit: cover;
+
+  }
+  .monogram-title{
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-gray-600);
+  }
+  .monogram-phrase{
+    font-size: var(--text-lg);
+    color: var(--color-gray-500);
   }
 }
