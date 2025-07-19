@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import {Navbar} from './navbar/navbar';
 import {LandingPage} from './landing-page/landing-page';
+import {AboutMe} from './about-me/about-me';
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, LandingPage],
+  imports: [Navbar, LandingPage, AboutMe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

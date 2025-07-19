@@ -1,0 +1,39 @@
+.about{
+  background-color: var(--bg-secondary);
+
+  .wrapper{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:12rem;
+  }
+  .block{
+    background-color: pink;
+  }
+
+  .about-title{
+    font-size: var(--text-5xl);
+    font-weight: var(--font-weight-light);
+  }
+  .about-paragraph{
+    color: var(--color-gray-600);
+    font-size: var(--text-lg);
+    text-align: justify;
+  }
+  .flow > * + * {
+    margin-top: 2em;
+  }
+  .about--tech-stack{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .tag{
+      padding-inline: 1.2rem;
+      padding-block: 0.35rem;
+      border-radius: 3rem;
+      background-color: var(--color-gray-100);
+      color: var(--text-base);
+      font-weight: var(--font-weight-medium);
+    }
+  }
+}
