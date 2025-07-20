@@ -60,7 +60,7 @@
         order: 2;
       }
       .about--tech-stack {
-        justify-content: center;
+      gap:5px;
       }
     }
   }
