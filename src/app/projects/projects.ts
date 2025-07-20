@@ -1,17 +1,49 @@
-import { Component } from '@angular/core';
-import {LucideAngularModule, ChevronLeft, ChevronRight, MouseIcon} from 'lucide-angular';
+import {Component, computed, Signal, signal} from '@angular/core';
+import {LucideAngularModule, ChevronLeft, ChevronRight} from 'lucide-angular';
 import {ProjectCard} from './project-card/project-card';
+import {Project} from '../models';
+import {NgClass} from '@angular/common';
 
 @Component({
   selector: 'app-projects',
-  imports: [LucideAngularModule, ProjectCard],
+  imports: [LucideAngularModule, ProjectCard, NgClass],
   templateUrl: './projects.html',
   styleUrl: './projects.css'
 })
+
+
 export class Projects {
-protected readonly icons ={
-  left: ChevronLeft,
-  right: ChevronRight,
-}
-  protected readonly MouseIcon = MouseIcon;
+  protected readonly icons = {
+    left: ChevronLeft,
+    right: ChevronRight,
+  }
+  protected allProjectList: Project[] = [{
+    name: 'AssignIt - Project Management Tools',
+    description: 'A full-stack project management tool to streamline team collaboration with organized workspaces, sprints, and role-based task management',
+    link: {
+      code: 'https://github.com/saksham310/assignit-frontend',
+      live: 'https://assignit.sharmasaksham.com.np/'
+    },
+    tech: ['React', 'Typescript', 'Postgres', 'Node.js', 'Express.js'],
+    imageUrl: '../../assets/project1.png'
+  }, {
+    name: 'MindVault - Personal Knowledge Tracker',
+    description: 'A minimalist web app to capture, organize, and revisit personal notes and ideas with markdown support and tag-based filtering.',
+    link: {
+      code: 'github',
+      live: 'live'
+    },
+    tech: ['React', 'Zustand', 'Node.js', 'MongoDB'],
+    imageUrl: '../../assets/project1.png'
+  }];
+
+  protected currentIndex = signal(0)
+  public selectedProject: Signal<Project> = computed(() => this.allProjectList[this.currentIndex()])
+
+  protected handleClick = {
+    prev: () => this.currentIndex.update((value) => (value - 1 + this.allProjectList.length) % this.allProjectList.length),
+    next: () => this.currentIndex.update((value) => (value + 1 ) % this.allProjectList.length),
+    updateIndex: (index:number) => this.currentIndex.set(index)
+  }
+
 }

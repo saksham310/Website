@@ -1,5 +1,6 @@
 .section-info {
   text-align: center;
+  margin-bottom: 2rem;
 
   .project-title {
     font-size: clamp(var(--text-lg), 1.65rem + 1.125vw, var(--text-5xl));
@@ -31,6 +32,7 @@
     gap: 0.75rem;
 
     .indicator {
+      cursor: pointer;
       border: none;
       width: 0.75rem;
       height: 0.75rem;
