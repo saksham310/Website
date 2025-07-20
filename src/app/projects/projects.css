@@ -2,12 +2,12 @@
   text-align: center;
 
   .project-title {
-    font-size: var(--text-5xl);
+    font-size: clamp(var(--text-lg), 1.65rem + 1.125vw, var(--text-5xl));
     font-weight: var(--font-weight-light);
   }
 
   .project-info {
-    font-size: var(--text-lg);
+    font-size: clamp( var(--text-sm), 0.825rem + 0.25vw,  var(--text-lg));
     color: var(--color-gray-600)
   }
 }
