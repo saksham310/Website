@@ -11,8 +11,12 @@
     color: var(--color-gray-600)
   }
 }
-
-.card-container {
+.card-container{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.navigation-container {
   margin-top: 5rem;
   display: flex;
   justify-content: space-between;

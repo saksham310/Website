@@ -6,15 +6,19 @@
       </p>
     </div>
     <div class="card-container">
-      <div class="indicator-container">
-        <button class="indicator active"></button>
-        <button class="indicator"></button>
-        <button class="indicator"></button>
+      <div class="navigation-container">
+        <div class="indicator-container">
+          <button class="indicator active"></button>
+          <button class="indicator"></button>
+          <button class="indicator"></button>
+        </div>
+        <div class="action-btn">
+          <span class="button"> <lucide-angular [img]="icons.left" class="my-icon"></lucide-angular></span>
+          <span class="button"> <lucide-angular [img]="icons.right" class="my-icon"></lucide-angular></span>
+        </div>
       </div>
-      <div class="action-btn">
-        <span class="button"> <lucide-angular [img]="icons.left" class="my-icon"></lucide-angular></span>
-        <span class="button"> <lucide-angular [img]="icons.right" class="my-icon"></lucide-angular></span>
-      </div>
+      <app-project-card/>
     </div>
+
   </div>
 </section>
