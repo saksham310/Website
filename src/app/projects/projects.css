@@ -1,0 +1,61 @@
+.section-info {
+  text-align: center;
+
+  .project-title {
+    font-size: var(--text-5xl);
+    font-weight: var(--font-weight-light);
+  }
+
+  .project-info {
+    font-size: var(--text-lg);
+    color: var(--color-gray-600)
+  }
+}
+
+.card-container {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .indicator-container {
+    display: flex;
+    gap: 0.75rem;
+
+    .indicator {
+      border: none;
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+      background-color: var(--color-gray-300);
+
+      &.active{
+        background-color: var(--color-black);
+      }
+    }
+  }
+
+  .action-btn{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+
+    .button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 1px solid var(--color-gray-300);
+      background-color: var(--color-white);
+
+      .my-icon{
+        height: 1.5rem;
+        color: var(--color-gray-600);
+      }
+    }
+
+    }
+}
