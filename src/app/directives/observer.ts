@@ -20,9 +20,9 @@ export class Observer implements OnInit, OnDestroy {
   private initialize(){
     const options = {
       root:null,
-      rootMargin:'-50px 0px -50px 0px',
+      rootMargin:'0px',
       scrollMargin:'0px',
-      threshold:0,
+      threshold:0.5,
     }
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
