@@ -17,12 +17,14 @@
   }
 }
 
+
 .experience-details {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   place-content: center;
   padding: 4rem 6rem;
+
 
   .position-info {
     grid-column: 1/2;
@@ -77,6 +79,7 @@
 
     .position-info,.job-description{
       grid-column: unset;
+      position: unset;
 
     }
 
