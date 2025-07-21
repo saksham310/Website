@@ -1,12 +1,13 @@
 <section class="section">
   <div class="wrapper">
     <div class="section-info flow">
-      <h2 class="project-title">Featured Projects</h2>
-      <p class="project-info">A selection of my recent work showcasing different technologies and approaches
+      <h2 class="project-title">{{ wrapperInfo.title }}</h2>
+      <p class="project-info">
+        {{wrapperInfo.subTitle}}
       </p>
     </div>
     <div class="card-container">
-      @if (allProjectList.length > 1) {
+      @if (isMultipleProjects) {
         <div class="navigation-container">
           <div class="indicator-container">
             @for (_ of allProjectList; track $index) {

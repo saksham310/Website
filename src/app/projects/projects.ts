@@ -17,6 +17,7 @@ export class Projects {
     left: ChevronLeft,
     right: ChevronRight,
   }
+
   protected allProjectList: Project[] = [{
     name: 'AssignIt - Project Management Tools',
     description: 'A full-stack project management tool to streamline team collaboration with organized workspaces, sprints, and role-based task management',
@@ -27,6 +28,11 @@ export class Projects {
     tech: ['React', 'Typescript', 'Postgres', 'Node.js', 'Express.js'],
     imageUrl: '../../assets/project1.png'
   }];
+  protected isMultipleProjects = this.allProjectList.length > 1
+  protected wrapperInfo = {
+    title : this.isMultipleProjects ? 'Featured Projects' : 'Featured Project',
+    subTitle : this.isMultipleProjects ? 'A selection of my recent work showcasing different technologies and approaches' : 'A deep dive into a recent full-stack application.',
+  }
 
   protected currentIndex = signal(0)
   public selectedProject: Signal<Project> = computed(() => this.allProjectList[this.currentIndex()])
