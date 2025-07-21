@@ -75,7 +75,7 @@
 
   @media (width < 760px) {
     grid-template-columns: 1fr;
-    padding: 1rem;
+    padding: 0.5rem;
 
     .position-info,.job-description{
       grid-column: unset;
