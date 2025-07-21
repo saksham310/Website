@@ -1,10 +1,10 @@
-.wrapper{
+.wrapper {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap:2rem;
+  gap: 2rem;
 
   .title {
     font-size: clamp(var(--text-lg), 1.65rem + 1.125vw, var(--text-5xl));
@@ -17,8 +17,44 @@
     max-width: 42rem;
   }
 
-  .contact{
+  .cta-btn {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .mail{
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      border: 1px solid var(--color-gray-600);
+      border-radius: 0.5rem;
+      background-color: var(--color-black);
+      color: var(--color-white);
+      gap: 1rem;
+
+      .my-icon{
+        color: var(--color-white);
+      }
+    }
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      background-color: var(--color-white);
+
+    }
+    .my-icon {
+      height: 1.5rem;
+      color: var(--color-gray-600);
+    }
+  }
+
+  .contact {
     font-size: var(--text-sm);
     color: var(--color-gray-500);
+
   }
 }
