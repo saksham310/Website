@@ -5,10 +5,11 @@ import {AboutMe} from './about-me/about-me';
 import {Projects} from './projects/projects';
 import {Experience} from './experience/experience';
 import {Connect} from './connect/connect';
+import {Observer} from './directives/observer';
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, LandingPage, AboutMe, Projects, Experience, Connect],
+  imports: [Navbar, LandingPage, AboutMe, Projects, Experience, Connect, Observer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

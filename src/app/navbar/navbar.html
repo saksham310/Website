@@ -2,11 +2,21 @@
   <nav class="primary-navigation">
     <div class="navigation-link">
       <ul role="list">
-        <a href="#home"><li>Home</li></a>
-        <a href="#about"><li>About</li></a>
-        <a href="#projects"><li>Projects</li></a>
-        <a href="#experience"><li>Experience</li></a>
-        <a href="#contact"><li>Contact</li></a>
+        <a href="#home" [ngClass]="{'active':currentSelection()==='home'}">
+          <li>Home</li>
+        </a>
+        <a href="#about" [ngClass]="{'active':currentSelection()==='about'}">
+          <li>About</li>
+        </a>
+        <a href="#projects" [ngClass]="{'active':currentSelection()==='projects'}">
+          <li>Projects</li>
+        </a>
+        <a href="#experience" [ngClass]="{'active':currentSelection()==='experience'}">
+          <li>Experience</li>
+        </a>
+        <a href="#contact" [ngClass]="{'active':currentSelection()==='contact'}">
+          <li>Contact</li>
+        </a>
       </ul>
     </div>
   </nav>

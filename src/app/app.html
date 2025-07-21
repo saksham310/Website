@@ -1,8 +1,8 @@
 <main>
   <app-navbar></app-navbar>
-  <app-landing-page id="home" ></app-landing-page>
-  <app-about-me id="about"></app-about-me>
-  <app-projects id="projects"></app-projects>
-  <app-experience id="experience"></app-experience>
-  <app-connect id="contact"></app-connect>
+  <app-landing-page id="home" appObserver currentSection="home"></app-landing-page>
+  <app-about-me id="about" appObserver currentSection="about"></app-about-me>
+  <app-projects id="projects" appObserver currentSection="projects"></app-projects>
+  <app-experience id="experience" appObserver currentSection="experience"></app-experience>
+  <app-connect id="contact" appObserver currentSection="contact"></app-connect>
 </main>

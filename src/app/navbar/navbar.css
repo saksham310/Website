@@ -30,9 +30,16 @@
     gap:1.5rem;
     align-items: center;
     cursor: pointer;
+    .active{
+      color: var(--color-black);
+    }
     li{
       font-weight: var( --font-weight-medium);
       font-size: clamp(0.5rem, 0.54rem + 0.3vw, 0.9rem);
+
+      &:hover{
+        color:var(--color-gray-800);
+      }
     }
   }
 }
