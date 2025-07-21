@@ -10,7 +10,7 @@
     padding: 2rem 1rem;
 
     img {
-      object-fit: cover;
+      object-fit: contain;
       height: 100%;
       width: 100%;
     }
@@ -49,7 +49,11 @@
         font-size: var(--text-xs);
       }
     }
-
+    .project-note{
+      font-size: var(--text-xs);
+      color: var(--color-gray-600);
+      font-weight: var(--font-weight-light);
+    }
     .cta-btn {
       display: flex;
       align-items: center;
