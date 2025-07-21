@@ -1,0 +1,17 @@
+.section{
+  background-color: var(--bg-secondary);
+}
+.section-info {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  .experience-title {
+    font-size: clamp(var(--text-lg), 1.65rem + 1.125vw, var(--text-5xl));
+    font-weight: var(--font-weight-light);
+  }
+
+  .experience-info {
+    font-size: clamp(var(--text-sm), 0.825rem + 0.25vw, var(--text-lg));
+    color: var(--color-gray-600)
+  }
+}

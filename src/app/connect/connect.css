@@ -1,0 +1,24 @@
+.wrapper{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:2rem;
+
+  .title {
+    font-size: clamp(var(--text-lg), 1.65rem + 1.125vw, var(--text-5xl));
+    font-weight: var(--font-weight-light);
+  }
+
+  .info {
+    font-size: clamp(var(--text-sm), 0.825rem + 0.25vw, var(--text-lg));
+    color: var(--color-gray-600);
+    max-width: 42rem;
+  }
+
+  .contact{
+    font-size: var(--text-sm);
+    color: var(--color-gray-500);
+  }
+}

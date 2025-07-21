@@ -26,15 +26,6 @@ export class Projects {
     },
     tech: ['React', 'Typescript', 'Postgres', 'Node.js', 'Express.js'],
     imageUrl: '../../assets/project1.png'
-  }, {
-    name: 'MindVault - Personal Knowledge Tracker',
-    description: 'A minimalist web app to capture, organize, and revisit personal notes and ideas with markdown support and tag-based filtering.',
-    link: {
-      code: 'github',
-      live: 'live'
-    },
-    tech: ['React', 'Zustand', 'Node.js', 'MongoDB'],
-    imageUrl: '../../assets/project1.png'
   }];
 
   protected currentIndex = signal(0)

@@ -146,6 +146,18 @@
     color: var(--text-primary);
     background-color: var(--bg-primary);
   }
+  html{
+    scroll-behavior: smooth;
+  }
+  a{
+    text-decoration: none;
+    color: inherit;
+
+    &:visited, &:active {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
 }
 
 @layer layout{
