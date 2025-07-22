@@ -1,4 +1,14 @@
-import {Component, effect, inject, OnChanges, OnInit, Signal, signal, SimpleChanges} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  effect, ElementRef,
+  inject,
+  OnChanges,
+  OnInit,
+  Signal,
+  signal,
+  SimpleChanges
+} from '@angular/core';
 import {BaseService} from '../service/base.service';
 import {NgClass} from '@angular/common';
 
@@ -10,11 +20,20 @@ import {NgClass} from '@angular/common';
   templateUrl: './navbar.html',
   styleUrl: './navbar.css'
 })
-export class Navbar  {
-   private baseService: BaseService = inject(BaseService);
-   protected currentSelection:Signal<string> = this.baseService.currentSection;
+export class Navbar implements AfterViewInit {
+  private baseService: BaseService = inject(BaseService);
+  protected currentSelection: Signal<string> = this.baseService.currentSection;
+  private gsap!: typeof gsap | null;
 
-   constructor() {
-   }
+  constructor(private elementRef:ElementRef) {
+  }
 
+  async ngAfterViewInit() {
+    this.gsap = await this.baseService.loadGSAP()
+    this.loadAnimation();
+  }
+
+  private loadAnimation() {
+    this.gsap?.fromTo('.header', {y: -30, opacity:0}, {y: 0,opacity: 1, duration: 0.5});
+  }
 }

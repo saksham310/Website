@@ -7,35 +7,46 @@
   align-items: center;
   gap: 1rem;
 
-  @media (width < 760px){
-  padding-inline: 1rem;
-}
+  @media (width < 760px) {
+    padding-inline: 1rem;
+  }
 }
 
 .landing {
   min-height: 100dvh;
 
-  .landing-title{
+  .landing-title {
     font-size: clamp(var(--text-4xl), 1.8rem + 2.25vw, var(--text-7xl));
     font-weight: var(--font-weight-normal);
-    span{
+
+    span {
       font-weight: var(--font-weight-medium);
     }
   }
 
-  .landing-role{
+  .landing-role {
     font-size: clamp(0.975rem, 0.795rem + 0.9vw, var(--text-3xl));
     color: var(--color-gray-600);
   }
 
-  .landing-phrase{
+  .landing-phrase {
     font-size: clamp(var(--text-xs), 0.675rem + 0.375vw, var(--text-lg));
     color: var(--color-gray-400);
     max-width: 32rem;
   }
 
-  .my-icon{
-   padding-top: 5rem;
+  .my-icon {
+    padding-top: 5rem;
+    animation: bounce 0.6s infinite alternate;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
 }
 
