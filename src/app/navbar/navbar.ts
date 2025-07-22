@@ -34,6 +34,6 @@ export class Navbar implements AfterViewInit {
   }
 
   private loadAnimation() {
-    this.gsap?.fromTo('.header', {y: -30, opacity:0}, {y: 0,opacity: 1, duration: 0.5});
+    this.gsap?.fromTo('.header', {y: -100, opacity:0}, {y: 0,opacity: 1, duration: 1});
   }
 }
