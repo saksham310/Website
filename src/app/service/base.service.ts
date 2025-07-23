@@ -19,7 +19,12 @@ export class BaseService {
   public async loadGSAP() {
     if (!this.isBrowser) return Promise.resolve(null);
     if (this.gsapPromise) return this.gsapPromise;
-    this.gsapPromise = import('gsap').then(m => m.gsap);
+    this.gsapPromise = import('gsap').then(async m => {
+      const gsap = m.gsap;
+      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+      gsap.registerPlugin(ScrollTrigger);
+      return gsap;
+    });
     return this.gsapPromise
   }
 

@@ -20,7 +20,7 @@ import {NgClass} from '@angular/common';
   templateUrl: './navbar.html',
   styleUrl: './navbar.css'
 })
-export class Navbar implements AfterViewInit {
+export class Navbar implements OnInit {
   private baseService: BaseService = inject(BaseService);
   protected currentSelection: Signal<string> = this.baseService.currentSection;
   private gsap!: typeof gsap | null;
@@ -28,7 +28,7 @@ export class Navbar implements AfterViewInit {
   constructor(private elementRef:ElementRef) {
   }
 
-  async ngAfterViewInit() {
+  async ngOnInit() {
     this.gsap = await this.baseService.loadGSAP()
     this.loadAnimation();
   }
