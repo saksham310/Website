@@ -37,7 +37,7 @@ export class AboutMe implements AfterViewInit {
       .from('.about-monogram', {
         opacity: 0,
         y: 30,
-        duration: 1.2,
+        duration: 1.5,
         ease: "power3.out"
       }, "-=1.2")
       .from('.about--tech-stack', {

@@ -1,8 +1,9 @@
-import {Component, computed, Signal, signal} from '@angular/core';
+import {AfterViewInit, Component, computed, ElementRef, inject, Signal, signal, ViewChild} from '@angular/core';
 import {LucideAngularModule, ChevronLeft, ChevronRight} from 'lucide-angular';
 import {ProjectCard} from './project-card/project-card';
 import {Project} from '../models';
 import {NgClass} from '@angular/common';
+import {BaseService} from '../service/base.service';
 
 @Component({
   selector: 'app-projects',
@@ -12,11 +13,12 @@ import {NgClass} from '@angular/common';
 })
 
 
-export class Projects {
+export class Projects implements AfterViewInit {
   protected readonly icons = {
     left: ChevronLeft,
     right: ChevronRight,
   }
+
 
   protected allProjectList: Project[] = [{
     name: 'AssignIt - Project Management Tools',
@@ -30,8 +32,8 @@ export class Projects {
   }];
   protected isMultipleProjects = this.allProjectList.length > 1
   protected wrapperInfo = {
-    title : this.isMultipleProjects ? 'Featured Projects' : 'Featured Project',
-    subTitle : this.isMultipleProjects ? 'A selection of my recent work showcasing different technologies and approaches' : 'A deep dive into a recent full-stack application.',
+    title: this.isMultipleProjects ? 'Featured Projects' : 'Featured Project',
+    subTitle: this.isMultipleProjects ? 'A selection of my recent work showcasing different technologies and approaches' : 'A deep dive into a recent full-stack application.',
   }
 
   protected currentIndex = signal(0)
@@ -39,8 +41,36 @@ export class Projects {
 
   protected handleClick = {
     prev: () => this.currentIndex.update((value) => (value - 1 + this.allProjectList.length) % this.allProjectList.length),
-    next: () => this.currentIndex.update((value) => (value + 1 ) % this.allProjectList.length),
-    updateIndex: (index:number) => this.currentIndex.set(index)
+    next: () => this.currentIndex.update((value) => (value + 1) % this.allProjectList.length),
+    updateIndex: (index: number) => this.currentIndex.set(index)
+  }
+
+  private baseService: BaseService = inject(BaseService);
+  private gsap!: typeof gsap | null;
+
+  constructor(private elementRef: ElementRef) {
+  }
+
+  async ngAfterViewInit() {
+    this.gsap = await this.baseService.loadGSAP()
+    this.loadAnimation();
+  }
+
+  private loadAnimation() {
+    const host = this.elementRef.nativeElement;
+    const tl = this.gsap?.timeline({
+      scrollTrigger: {
+        trigger: host.querySelector('.section'),
+        start: "top 50%",
+        toggleActions: "play none none reset",
+      },
+
+    })
+
+    tl?.from('#title', {y: 100, opacity: 0, duration: 1.5, ease: "power3.out",})
+      .from('#info', {
+        y: 60, opacity: 0, duration: 1.2, ease: "power3.out"
+      }, "-=0.8")
   }
 
 }

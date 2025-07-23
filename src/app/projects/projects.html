@@ -1,8 +1,8 @@
 <section class="section">
   <div class="wrapper">
     <div class="section-info flow">
-      <h2 class="project-title">{{ wrapperInfo.title }}</h2>
-      <p class="project-info">
+      <h2 class="project-title" id="title">{{ wrapperInfo.title }}</h2>
+      <p class="project-info" id="info">
         {{wrapperInfo.subTitle}}
       </p>
     </div>
@@ -25,7 +25,7 @@
           </div>
         </div>
       }
-      <app-project-card [project]="selectedProject()"/>
+       <app-project-card [project]="selectedProject()" #card/>
     </div>
 
   </div>
