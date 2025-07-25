@@ -25,7 +25,7 @@ export class AboutMe implements AfterViewInit {
       scrollTrigger: {
         trigger: host.querySelector('.section'),
         start: "top 60%",
-        toggleActions: "play none none reset",
+        toggleActions: "play none none none",
       },
 
     })

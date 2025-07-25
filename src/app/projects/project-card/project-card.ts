@@ -33,7 +33,7 @@ export class ProjectCard implements AfterViewInit {
       scrollTrigger: {
         trigger: host,
         start: "top 90%",
-        toggleActions: "play none none reset",
+        toggleActions: "play none none none",
       },
 
     })
