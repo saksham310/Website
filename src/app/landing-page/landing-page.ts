@@ -32,7 +32,7 @@ protected readonly MouseIcon:LucideIconData = MouseIcon;
         .from('.landing-phrase',{
           y:40,opacity:0,duration:1.2,ease:"power3.out"
         }, "-=0.6")
-        .from('.my-icon',{
+        .from('#my-icon',{
           opacity:0,duration:1.2,ease:"power3.out"
         },"-=0.6")
 
