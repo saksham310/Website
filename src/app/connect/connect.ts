@@ -40,7 +40,7 @@ export class Connect implements AfterViewInit{
       .from('.info', {
         y: 60, opacity: 0, duration: 1, ease: "power3.out"
       }, "-=0.8")
-      .from('.cta-btn', {
+      .from('#cta', {
         y: 60, opacity: 0, duration: 1, ease: "power3.out"
       }, "-=0.8")
       .from('.contact', {
