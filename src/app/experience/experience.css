@@ -63,7 +63,7 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 2rem;
 
       li {
         font-size: clamp(var(--text-sm), 0.85rem + 0.125vw, var(--text-base));
