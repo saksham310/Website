@@ -24,7 +24,7 @@ export class AboutMe implements AfterViewInit {
     const tl = this.gsap?.timeline({
       scrollTrigger: {
         trigger: host.querySelector('.section'),
-        start: "top 45%",
+        start: "top 60%",
         toggleActions: "play none none reset",
       },
 
