@@ -24,25 +24,12 @@ export class AboutMe implements AfterViewInit {
     const tl = this.gsap?.timeline({
       scrollTrigger: {
         trigger: host.querySelector('.section'),
-        start: "top 50%",
+        start: "top 45%",
         toggleActions: "play none none reset",
       },
 
     })
 
-    // tl?.from('.about-title', {y: 100, opacity: 0, duration: 0.8, ease: "power3.out",})
-    //   .from('.about-paragraph', {
-    //     y: 60, opacity: 0, duration: 0.6, ease: "power3.out"
-    //   }, "-=0.8")
-    //   .from('.about-monogram', {
-    //     opacity: 0,
-    //     y: 30,
-    //     duration: 0.6,
-    //     ease: "power3.out"
-    //   }, "-=1.2")
-    //   .from('.about--tech-stack', {
-    //     y: 40, opacity: 0, duration: 0.6, ease: "power3.out"
-    //   }, "-=0.6")
     tl?.from('.about-title', {
       y: 80, // More travel distance for a longer duration
       opacity: 0,
