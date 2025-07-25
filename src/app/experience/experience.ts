@@ -10,7 +10,7 @@ import {BaseService} from '../service/base.service';
 export class Experience implements AfterViewInit {
   protected readonly  achievements = [
     'Architected a reusable component library in Angular that increased development velocity by 40%.',
-    'Optimized application performance using advanced data structures (Set, Map) to enhance user experience.',
+    'Optimized application performance using advanced data structures to enhance user experience.',
     'Translated complex Figma designs into pixel-perfect, responsive, and accessible user interfaces.'
   ];
 
