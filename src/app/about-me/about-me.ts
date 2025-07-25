@@ -30,19 +30,43 @@ export class AboutMe implements AfterViewInit {
 
     })
 
-    tl?.from('.about-title', {y: 100, opacity: 0, duration: 1.3, ease: "power3.out",})
+    // tl?.from('.about-title', {y: 100, opacity: 0, duration: 0.8, ease: "power3.out",})
+    //   .from('.about-paragraph', {
+    //     y: 60, opacity: 0, duration: 0.6, ease: "power3.out"
+    //   }, "-=0.8")
+    //   .from('.about-monogram', {
+    //     opacity: 0,
+    //     y: 30,
+    //     duration: 0.6,
+    //     ease: "power3.out"
+    //   }, "-=1.2")
+    //   .from('.about--tech-stack', {
+    //     y: 40, opacity: 0, duration: 0.6, ease: "power3.out"
+    //   }, "-=0.6")
+    tl?.from('.about-title', {
+      y: 80, // More travel distance for a longer duration
+      opacity: 0,
+      duration: 1.0, // A full second for the main title
+      ease: 'power3.out',
+    })
       .from('.about-paragraph', {
-        y: 60, opacity: 0, duration: 1, ease: "power3.out"
-      }, "-=0.8")
+        y: 60,
+        opacity: 0,
+        duration: 0.9, // Almost a full second
+        ease: 'power3.out',
+      }, '-=0.7') // A significant but not total overlap
       .from('.about-monogram', {
         opacity: 0,
         y: 30,
-        duration: 1,
-        ease: "power3.out"
-      }, "-=1.2")
+        duration: 0.8,
+        ease: 'power3.out',
+      }, '<0.3') // A clear 0.3s delay after the paragraph starts animating
       .from('.about--tech-stack', {
-        y: 40, opacity: 0, duration: 1, ease: "power3.out"
-      }, "-=0.6")
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power3.out',
+      }, '-=0.5');
 
   }
 }
