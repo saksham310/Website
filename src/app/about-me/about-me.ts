@@ -45,9 +45,9 @@ export class AboutMe implements AfterViewInit {
       .from('.about-monogram', {
         opacity: 0,
         y: 30,
-        duration: 0.8,
+        duration: 0.4,
         ease: 'power3.out',
-      }, '<0.3') // A clear 0.3s delay after the paragraph starts animating
+      }, '<0.3')
       .from('.about--tech-stack', {
         y: 40,
         opacity: 0,

@@ -13,7 +13,7 @@
 }
 
 .landing {
-  min-height: 88dvh;
+  min-height: 95dvh;
 
   .landing-title {
     font-size: clamp(var(--text-4xl), 1.8rem + 2.25vw, var(--text-7xl));
@@ -37,6 +37,7 @@
 
   .my-icon {
     padding-top: 5rem;
+    margin-top: 2rem;
     animation: bounce 0.6s infinite alternate;
   }
 
