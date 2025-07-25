@@ -12,7 +12,7 @@ export class LandingPage {
   private gsap!: typeof gsap | null;
   private baseService = inject(BaseService);
   protected  isMobile= false ;
-  protected readonly ScrollIcon!:LucideIconData;
+  protected readonly ScrollIcon:LucideIconData = MouseIcon;
 
   constructor(private elementRef:ElementRef) {
     if(this.baseService.isBrowserEnvironment()){
