@@ -67,7 +67,7 @@ export class Projects implements AfterViewInit {
 
     })
 
-    tl?.from('#title', {y: 100, opacity: 0, duration: 1.5, ease: "power3.out",})
+    tl?.from('#title', {y: 100, opacity: 0, duration: 1.3, ease: "power3.out",})
       .from('#info', {
         y: 60, opacity: 0, duration: 1.2, ease: "power3.out"
       }, "-=0.8")

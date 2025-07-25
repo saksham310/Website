@@ -40,7 +40,7 @@ export class ProjectCard implements AfterViewInit {
     tl?.from(host, {
         opacity: 0,
         y: 300,
-        duration: 1.5,
+        duration: 1.3,
         ease: "ease-in",
       }
     )
