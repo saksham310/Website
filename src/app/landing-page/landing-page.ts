@@ -10,9 +10,9 @@ import {BaseService} from '../service/base.service';
 })
 export class LandingPage {
   private gsap!: typeof gsap | null;
-  private baseService = inject(BaseService);
+  protected baseService = inject(BaseService);
   protected  isMobile= false ;
-  protected readonly ScrollIcon:LucideIconData = MouseIcon;
+  protected readonly ScrollIcon!:LucideIconData;
 
   constructor(private elementRef:ElementRef) {
     if(this.baseService.isBrowserEnvironment()){
