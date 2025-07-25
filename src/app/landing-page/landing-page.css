@@ -31,7 +31,7 @@
 
   .landing-phrase {
     font-size: clamp(var(--text-xs), 0.675rem + 0.375vw, var(--text-lg));
-    color: var(--color-gray-400);
+    color: var(--color-gray-500);
     max-width: 32rem;
   }
 
