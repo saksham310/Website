@@ -4,7 +4,7 @@
   .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12rem;
+    gap: clamp(0px, calc((100vw - 768px) * 0.05), 12px);
 
 
   }

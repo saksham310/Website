@@ -1,5 +1,5 @@
 import {Component, ElementRef, inject} from '@angular/core';
-import {LucideAngularModule, MouseIcon, LucideIconData} from 'lucide-angular';
+import {LucideAngularModule, MouseIcon, LucideIconData, ChevronDownIcon} from 'lucide-angular';
 import {BaseService} from '../service/base.service';
 
 @Component({
@@ -9,11 +9,16 @@ import {BaseService} from '../service/base.service';
   styleUrl: './landing-page.css'
 })
 export class LandingPage {
-protected readonly MouseIcon:LucideIconData = MouseIcon;
   private gsap!: typeof gsap | null;
   private baseService = inject(BaseService);
+  protected  isMobile= false ;
+  protected readonly ScrollIcon!:LucideIconData;
 
   constructor(private elementRef:ElementRef) {
+    if(this.baseService.isBrowserEnvironment()){
+      this.isMobile = window.matchMedia('(max-width: 768px)').matches
+      this.ScrollIcon = this.isMobile ? ChevronDownIcon : MouseIcon;
+    }
   }
 
   async ngAfterViewInit() {
