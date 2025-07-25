@@ -1,0 +1,6 @@
+# Instructions for all web crawlers
+User-agent: *
+Allow: /
+
+# Location of the sitemap
+Sitemap: https://www.sharmasaksham.com.np/sitemap.xml
