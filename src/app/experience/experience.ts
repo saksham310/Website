@@ -36,7 +36,7 @@ export class Experience implements AfterViewInit {
 
     })
 
-    tl?.from('.experience-title', {y: 100, opacity: 0, duration: 1.5, ease: "power3.out",})
+    tl?.from('.experience-title', {y: 100, opacity: 0, duration: 1.3, ease: "power3.out",})
       .from('.experience-info', {
         y: 60, opacity: 0, duration: 1.2, ease: "power3.out"
       }, "-=0.8")

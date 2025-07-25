@@ -25,15 +25,15 @@ protected readonly MouseIcon:LucideIconData = MouseIcon;
 
   private loadAnimation() {
     const tl = this.gsap?.timeline()
-      tl?.from('.landing-title',{y:100,opacity:0,duration:1.5,ease:"power3.out"})
+      tl?.from('.landing-title',{y:100,opacity:0,duration:1.2,ease:"power3.out"})
         .from('.landing-role',{
-          y:60,opacity:0,duration:1.2,ease:"power3.out"
+          y:60,opacity:0,duration:1,ease:"power3.out"
         }, "-=0.8")
         .from('.landing-phrase',{
-          y:40,opacity:0,duration:1.2,ease:"power3.out"
+          y:40,opacity:0,duration:1,ease:"power3.out"
         }, "-=0.6")
         .from('#my-icon',{
-          opacity:0,duration:1.2,ease:"power3.out"
+          opacity:0,duration:1,ease:"power3.out"
         },"-=0.6")
 
   }
